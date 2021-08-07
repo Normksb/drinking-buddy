@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Norm Bernard",
+    "email": "email@here.net",
+    "password": "123456"
+  },
+  {
+    "name": "Joe Bloggs",
+    "email": "email2@here.net",
+    "password": "123456"
+  },
+  {
+    "name": "Fred Nerk",
+    "email": "email3@here.net",
+    "password": "123456"
+  }
+
+]
