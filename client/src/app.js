@@ -10,9 +10,24 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Login from './components/Login';
 
-// Construct our main GraphQL API endpoint
+// Create main GraphQL API endpoint
 const httpLink = createHttpLink({
-    uri: '/graphql',
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
 });
 
 function App() {
