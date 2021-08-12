@@ -29,8 +29,8 @@ const Login = (props) => {
         });
   
         Auth.login(data.login.token);
-      } catch (e) {
-        console.error(e);
+      } catch (error) {
+        console.error(error.message);
       }
   
       // clear form values
