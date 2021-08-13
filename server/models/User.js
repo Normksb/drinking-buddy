@@ -19,6 +19,18 @@ const UserSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  age: {
+    type: Number,
+    required: true,
+  },
+  weight: {
+    type: Number,
+    required: true,
+  },
+  gender: {
+    type: String,
+    required: true,
+  }
 });
 
 // set up pre-save middleware to create password

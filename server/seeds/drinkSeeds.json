@@ -1,0 +1,22 @@
+[
+  {
+    "Drink": "Full Strengh Beer Stubby",
+    "Potency": "5",
+    "Volume": "375"
+  },
+  {
+    "Drink": "Glass White Wine",
+    "Potency": "5",
+    "Volume": "150"
+  },
+  {
+    "Drink": "Glass Red Wine",
+    "Potency": "5",
+    "Volume": "150"
+  },
+  {
+    "Drink": "Shot of Spirits",
+    "Potency": "40",
+    "Volume": "43"
+  }
+]
