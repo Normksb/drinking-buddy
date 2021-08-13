@@ -5,14 +5,15 @@ import { SIGNUP_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const SignUp = () => {
+const SignUp = (props) => {
     const [formState, setFormState] = useState({ email: '',
                                                  password: '',
                                                  age: '',
                                                  weight: '',
-                                                 name: ''
+                                                 name: '',
+                                                 gender: ''
                                                  });
-    const [login, { error, data }] = useMutation(SIGNUP_USER);
+    const [signUp, { error, data }] = useMutation(SIGNUP_USER);
   
     // update state based on form input changes
     const handleChange = (event) => {
@@ -29,7 +30,7 @@ const SignUp = () => {
       event.preventDefault();
       console.log(formState);
       try {
-        const { data } = await login({
+        const { data } = await signUp({
           variables: { ...formState },
         });
   
@@ -43,7 +44,8 @@ const SignUp = () => {
       password: '',
       age: '',
       weight: '',
-      name: ''
+      name: '',
+      gender: '',
       });
     };
     return (
@@ -106,3 +108,5 @@ const SignUp = () => {
         
       );
 }
+
+export default SignUp

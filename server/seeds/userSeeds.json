@@ -2,17 +2,27 @@
   {
     "name": "Norm Bernard",
     "email": "email@here.net",
-    "password": "123456"
+    "password": "123456",
+    "age": "30",
+    "weight": "100",
+    "gender": "male"
+
   },
   {
     "name": "Joe Bloggs",
     "email": "email2@here.net",
-    "password": "123456"
+    "password": "123456",
+    "age": "35",
+    "weight": "80",
+    "gender": "male"
   },
   {
-    "name": "Fred Nerk",
+    "name": "Jessica Somebody",
     "email": "email3@here.net",
-    "password": "123456"
+    "password": "123456",
+    "age": "32",
+    "weight": "60",
+    "gender": "female"
   }
 
 ]
