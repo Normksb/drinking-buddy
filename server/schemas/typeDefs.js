@@ -18,6 +18,11 @@ const typeDefs = gql`
     Volume: Int
   }
 
+  type Query {
+    users: [User]
+    user(id: String!): User
+  }
+
   type Auth {
     token: ID!
     user: User
