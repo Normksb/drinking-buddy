@@ -6,16 +6,16 @@ const typeDefs = gql`
     name: String
     email: String
     password: String
-    age: Number
-    weight: Number
+    age: Int
+    weight: Int
     gender: String
   }
 
   type Drink {
     _id: ID
     drink: String
-    Potency: Number
-    Volume: Number
+    Potency: Int
+    Volume: Int
   }
 
   type Auth {
@@ -24,7 +24,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(name: String!, email: String!, password: String!, age: Number!, weight: Number!, gender: String): Auth
+    addUser(name: String!, email: String!, password: String!, age: Int!, weight: Int!, gender: String): Auth
     login(email: String!, password: String!): Auth
     
         
