@@ -20,7 +20,7 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(id: String!): User
+    user(userId: ID!): User
   }
 
   type Auth {
