@@ -22,7 +22,7 @@ const Login = (props) => {
     // submit form
     const handleFormSubmit = async (event) => {
       event.preventDefault();
-      console.log(formState);
+      //console.log(formState);
       try {
         const { data } = await login({
           variables: { ...formState },
@@ -46,6 +46,7 @@ const Login = (props) => {
                   <input
                     className="form-input"
                     placeholder="Your email"
+                    autoComplete="email"
                     name="email"
                     type="email"
                     value={formState.email}
@@ -54,6 +55,7 @@ const Login = (props) => {
                   <input
                     className="form-input"
                     placeholder="******"
+                    autoComplete="current-password"
                     name="password"
                     type="password"
                     value={formState.password}
