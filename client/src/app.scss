@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #2e2e2e;
+  color: #fefefe;
+  font-family: "Lato", sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Bebas Neue", cursive;
+  }
+  .db-btn {
+    text-transform: uppercase;
+  }
+  .db-btn-yellow {
+    background-color: #e3d43d;
+    border-color: #e3d43d;
+    color: #2e2e2e;
+  }
+}
