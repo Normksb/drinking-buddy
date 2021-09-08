@@ -19,11 +19,16 @@ const SignUp = (props) => {
   
     // update state based on form input changes
     const handleChange = (event) => {
-      const { name, value } = event.target;
+      const { name, value, type } = event.target;
+      let val = value;
+      if(type == 'number'){
+        val = parseInt(value);
+      }
       setFormState({
         ...formState,
-        [name]: value,
+        [name]: val,
       });
+      console.log(formState);
     };
   
     // submit form
@@ -35,19 +40,20 @@ const SignUp = (props) => {
           variables: { ...formState },
         });
   
-        Auth.login(data.login.token);
+        Auth.login(data.addUser.token);
+        
+        // clear form values
+        // setFormState({ email: '',
+        //   password: '',
+        //   age: '',
+        //   weight: '',
+        //   name: '',
+        //   gender: '',
+        // });
       } catch (error) {
         console.error(error.message);
       }
   
-      // clear form values
-      setFormState({ email: '',
-        password: '',
-        age: '',
-        weight: '',
-        name: '',
-        gender: '',
-      });
     };
     return (
       <div class="container">
@@ -111,7 +117,8 @@ const SignUp = (props) => {
               onChange={handleChange}
             />
             <label for="gender" className="sr-only">Gender</label>
-            <select id="gender" name="gender" className="form-control mb-4 rounded-bottom">
+            <select id="gender" name="gender" className="form-control mb-4 rounded-bottom" onChange={handleChange}>
+                <option value="">Choose Gender</option>
                 <option value="male">male</option>
                 <option value="female">female</option>
             </select>
