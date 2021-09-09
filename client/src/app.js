@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import Profile from './components/Profile'
+import Dashboard from './components/Dashboard';
 
 // Create main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -39,7 +39,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/dashboard" component={Dashboard} />
         </Switch>
       </Router>
     </ApolloProvider>

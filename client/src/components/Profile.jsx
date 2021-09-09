@@ -24,11 +24,6 @@ const Profile = () => {
 
   const profile = data.user;
 
-  // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
-  // if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-  //   return <Redirect to="/me" />;
-  // }
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -42,14 +37,23 @@ const Profile = () => {
     );
   }
 
-
   return (
-    <div>
-      <p>Name: {profile.name}</p>
-      <p>Email: {profile.email}</p>
-      <p>Age: {profile.age} </p>
-      <p>Weight: {profile.weight}kg</p>
-      <p>Gender: {profile.gender}</p>
+    <div className="card order-info">
+      <div className="card-body">
+        <h4 className="card-title">{profile.name}</h4>
+        <p className="card-text">{profile.email}</p>
+      </div>
+      <ul className="collapse list-group list-group-flush" id="profile">
+        <li className="list-group-item"><strong>Age</strong> {profile.age}</li>
+        <li className="list-group-item"><strong>Weight</strong> {profile.weight}</li>
+        <li className="list-group-item"><strong>Gender</strong> {profile.gender}</li>
+      </ul>
+      <div className="card-footer">
+        <a href="/" className="card-link">Edit</a>
+        <button data-target="#profile" className="btn btn-sm float-right" data-toggle="collapse"  role="button" aria-expanded="false" aria-controls="profile-info">
+          Toggle Info
+        </button>
+      </div>
     </div>
   )
 }
