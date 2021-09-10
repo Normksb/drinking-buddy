@@ -54,6 +54,13 @@ body {
   #main-container {
     max-width: 700px;
     margin: auto;
+
+    #drinking-session {
+      .timer {
+        font-size: 100px;
+        color: #fff;
+      }
+    }
   }
 
   .footer {
