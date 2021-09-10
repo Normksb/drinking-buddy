@@ -1,3 +1,6 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
 html,
 body {
   height: 100%;
@@ -38,10 +41,19 @@ body {
   .img-responsive {
     margin: 0 auto;
   }
-
+  #header-nav {
+    #logo {
+      max-width: 220px;
+    }
+  }
   #root {
-    min-width: 800px;
     color: #2e2e2e;
+    width: 100%;
+  }
+
+  #main-container {
+    max-width: 700px;
+    margin: auto;
   }
 
   .footer {
@@ -57,5 +69,16 @@ body {
       padding-left: 15px;
       font-size: 14px;
     }
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  #main-container {
+    max-width: 100%;
+  }
+}
+@include media-breakpoint-up(sm) {
+  #main-container {
+    max-width: 100%;
   }
 }
