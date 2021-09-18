@@ -3,7 +3,7 @@
 # Drinking Buddy
  
   
-  ![alt text](./screenshot.PNG)
+![Drinking Buddy](./screenshot.PNG)
   
 [Here is a link to the deployed app on Heroku](https://my-drinking-buddy.herokuapp.com/)
 
