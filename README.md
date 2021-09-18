@@ -3,7 +3,7 @@
 # Drinking Buddy
  
   
-![Drinking Buddy](./screenshot.PNG)
+![Drinking Buddy](https://github.com/Normksb/drinking-buddy/blob/main/screenshot.png)
   
 [Here is a link to the deployed app on Heroku](https://my-drinking-buddy.herokuapp.com/)
 
